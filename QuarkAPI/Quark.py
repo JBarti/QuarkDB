@@ -1,7 +1,7 @@
 from typing import Union
 
-from Controllers import GamesCollector, Filter, FilterNew
-from Controllers.Stores import StoreTypes, Game
+from .Controllers import GamesCollector, Filter, FilterNew
+from .Controllers.Stores import StoreTypes, Game
 
 
 class Quark:

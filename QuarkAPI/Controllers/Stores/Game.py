@@ -13,7 +13,7 @@ class Game:
     original_price: float
     discount_percentage: float
     fetch_date: datetime
-    store: List[StoreTypes]
+    store: str
     image_url: str
     release_date: datetime = None
     is_stored: bool = False

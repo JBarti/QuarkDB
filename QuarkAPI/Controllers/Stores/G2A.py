@@ -67,10 +67,9 @@ class G2A(Store):
         return datetime.strptime(release_date_str, "%Y-%m-%d")
 
     def get_prices(self, product: dict):
-        original_price = product.get("discount", {}).get("suggestedPrice")
+        original_price = (product.get("discount") or {}).get("suggestedPrice")
         price = product.get("minPrice")
         if not original_price:
             original_price = price
 
         return float(original_price or 0), float(price or 0)
-
