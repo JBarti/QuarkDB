@@ -10,7 +10,6 @@ pylint = "*"
 beautifulsoup4 = "*"
 requests = "*"
 pylint = "*"
-black = "*"
 kivy = "*"
 
 [requires]

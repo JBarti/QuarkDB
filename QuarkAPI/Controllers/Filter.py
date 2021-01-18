@@ -8,7 +8,6 @@ from .Stores.Store import StoreTypes
 class Filter:
     stores: List[str]
     name: str = None
-    dev: str = None
     price_from: float = None
     price_to: float = None
     discount: bool = None
