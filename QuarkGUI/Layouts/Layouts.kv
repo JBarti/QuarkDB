@@ -27,7 +27,7 @@
     cols:2
     canvas.before:
         Color:
-            rgba: (0,0,0.2,1)
+            rgba: (0,0,0,1)
         Rectangle:
             pos: self.pos
             size: self.size
@@ -42,7 +42,7 @@
         cols:1
         canvas.before:
             Color:
-                rgba: (1,0,0,1)
+                rgba: (0,0,0,1)
             Rectangle:
                 pos: self.pos
                 size: self.size
@@ -50,7 +50,7 @@
 
 <FilterLayout>
     effect_cls: ScrollEffect
-    size_hint:(0.5,1)
+    size_hint:(0.25,1)
     GridLayout:
         id: filters
         size_hint_y: None

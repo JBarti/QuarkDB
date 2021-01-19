@@ -1,52 +1,95 @@
 <GameTab>
     orientation: 'horizontal'
-    padding: 20
-    spacing: 20
+    padding: 15
+    spacing: 15
     size_hint_y: None
-    height:150
+    height:180
     canvas.before:
         Color:
-            rgba: (0,1,0,1)
+            rgba: (0,0.1,0,1)
         Rectangle:
             pos: self.pos
             size: self.size
     AsyncImage:
+        size_hint: (0.4,1)
         id:img_tab
         allow_stretch: True
         keep_ratio: False
     GridLayout:
         cols:2
+        spacing: 10
         canvas.before:
             Color:
-                rgba: (0,0,0.2,1)
+                rgba: (0,0,50/255,1)
             Rectangle:
                 pos: self.pos
                 size: self.size
         Label:
             text: "Name:"
+            text_size: self.width, None
+            size_hint: 1, None
+            height: self.texture_size[1]
+            halign: 'center'
+            valign: 'center'
+
+
         Label:
             id:name_tab
             text:""
+            multiline:True
+            text_size: self.width, None
+            size_hint: 1, None
+            height: self.texture_size[1]
+
         Label:
             text:"Store:"
+            text_size: self.width, None
+            size_hint: 1, None
+            height: self.texture_size[1]
+            halign: 'center'
         Label:
             id:store_tab
             text:""
+            text_size: self.width, None
+            size_hint: 1, None
+            height: self.texture_size[1]
+
         Label:
             text:"Price:"
+            text_size: self.width, None
+            size_hint: 1, None
+            height: self.texture_size[1]
+            halign: 'center'
         Label:
             id:price_tab
             text:""
+            text_size: self.width, None
+            size_hint: 1, None
+            height: self.texture_size[1]
         Label:
             text:"Discount:"
+            text_size: self.width, None
+            size_hint: 1, None
+            height: self.texture_size[1]
+            halign: 'center'
         Label:
             id:discount_tab
             text:""
+            text_size: self.width, None
+            size_hint: 1, None
+            height: self.texture_size[1]
         Label:
             text:"Original price:"
+            text_size: self.width, None
+            size_hint: 1, None
+            height: self.texture_size[1]
+            halign: 'center'
         Label:
             id:original_price_tab
             text:""
+            text_size: self.width, None
+            size_hint: 1, None
+            height: self.texture_size[1]
 
     FavouriteButton:
         id:btn_favourite
