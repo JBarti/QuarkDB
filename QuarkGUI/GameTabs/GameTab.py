@@ -25,7 +25,6 @@ class GameTab(BoxLayout):
         self.ids["btn_favourite"].disabled = game.is_stored or api.is_game_stored(game)
         self.ids["btn_favourite"].on_press = self.favourite_game
 
-
     def favourite_game(self):
         api.store_game(self.game)
         self.ids["btn_favourite"].disabled = True

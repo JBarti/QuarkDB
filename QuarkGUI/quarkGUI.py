@@ -1,5 +1,5 @@
 from kivy.config import Config
-Config.set('graphics','resizable',0)
+Config.set('graphics', 'resizable', 0)
 Config.set("graphics", "width", 900)
 Config.set("graphics", "height", 600)
 
@@ -26,16 +26,9 @@ Builder.load_file("./QuarkGUI/quarkGUIkivy.kv")
 class MainLayout(GridLayout):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.stored = False
 
         self.ids["btn_search"].on_press = self.apply_filter
         self.ids["filters"]._finish_init()
-
-    def get_test_filter(self):
-        return FilterNew(
-            name="Star Wars",
-            stores=[StoreTypes.steam],
-        )
 
     def get_page_filter_cls(self) -> Filter:
         main_page = self.ids["btn_main_pg"].state == "down"

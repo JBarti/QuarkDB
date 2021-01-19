@@ -25,7 +25,7 @@ class GameStore:
                 csvfile,
                 fieldnames=self.csv_fieldnames
             )
-            game = self.f_ormat_for_storage(game)
+            game = self.format_for_storage(game)
             self.storage.update({game.hash_id: game})
             writer.writerow(asdict(game))
 
@@ -37,7 +37,7 @@ class GameStore:
             )
 
             self.storage = {
-                game_dict["hash_id"]: self.extract_game(game_dict)
+                int(game_dict["hash_id"]): self.extract_game(game_dict)
                 for game_dict in reader
             }
 
@@ -51,6 +51,7 @@ class GameStore:
         game.price = float(game.price)
         game.original_price = float(game.original_price)
         game.discount_percentage = float(game.discount_percentage)
+        game.hash_id = int(game.hash_id)
 
         return game
 
