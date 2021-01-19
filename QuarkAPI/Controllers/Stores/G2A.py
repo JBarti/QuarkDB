@@ -64,7 +64,12 @@ class G2A(Store):
         if not release_date_str:
             return None
 
-        return datetime.strptime(release_date_str, "%Y-%m-%d")
+        date_formats = ["%Y-%m-%d", "%Y-%m"]
+        for fmt in date_formats:
+            try:
+                return datetime.strptime(release_date_str, "%Y-%m-%d")
+            except Exception:
+                print(f"Unable to read date {release_date_str}") 
 
     def get_prices(self, product: dict):
         original_price = (product.get("discount") or {}).get("suggestedPrice")

@@ -36,14 +36,13 @@ class GamesLayout(ScrollView):
 class FilterLayout(ScrollView):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-
+        self.store_filters = {}
 
     def _finish_init(self):
         self.store_filters = {
             StoreTypes.steam: self.ids["steam_check"],
             StoreTypes.g2a: self.ids["g2a_check"],
         }
-
 
     def get_prices(self):
         try:
@@ -57,9 +56,6 @@ class FilterLayout(ScrollView):
             price_to = None
 
         return price_from, price_to
-
-
-
 
     def get_filters(self):
         stores = [

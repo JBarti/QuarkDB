@@ -11,6 +11,8 @@ beautifulsoup4 = "*"
 requests = "*"
 pylint = "*"
 kivy = "*"
+fuzzysearch = "*"
+fuzzywuzzy = "*"
 
 [requires]
 python_version = "3.7"

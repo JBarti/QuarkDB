@@ -10,7 +10,8 @@
         Rectangle:
             pos: self.pos
             size: self.size
-    Image:
+    AsyncImage:
+        id:img_tab
         allow_stretch: True
         keep_ratio: False
     GridLayout:
@@ -29,13 +30,25 @@
         Label:
             text:"Store:"
         Label:
-            id:genre_tab
+            id:store_tab
             text:""
         Label:
             text:"Price:"
         Label:
             id:price_tab
             text:""
+        Label:
+            text:"Discount:"
+        Label:
+            id:discount_tab
+            text:""
+        Label:
+            text:"Original price:"
+        Label:
+            id:original_price_tab
+            text:""
 
     FavouriteButton:
+        id:btn_favourite
+        disabled: True
         pos_hint:{'center_y': 0.5}

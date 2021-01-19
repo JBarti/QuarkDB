@@ -10,6 +10,12 @@ class Quark:
     def get_games(self, filter_params: Filter):
         return self.gc.collect_games(filter_params)
 
+    def is_game_stored(self, game: Game):
+        return self.gc.store.is_stored(game)
+
+    def store_game(self, game: Game):
+        self.gc.store.store_game(game)
+
     def test(self):
         while 1:
             game_name = input("Enter game name: ")
@@ -27,12 +33,11 @@ class Quark:
         print(
             f"""
               name: {game.name} dev: {game.dev}
-              price: {game.price} starting: {game.original_price} discount: {game.discount_percentage * 100}
+              price: {game.price}
+              starting: {game.original_price} i
+              discount: {game.discount_percentage * 100}
               store: {game.store}
               """
         )
 
-
-if __name__ == "__main__":
-    api = Quark()
-    api.test()
+api = Quark()

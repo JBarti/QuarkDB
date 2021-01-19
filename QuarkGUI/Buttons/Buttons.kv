@@ -6,13 +6,16 @@
 
 <MainPageButton>
     text: "Main"
+    state: "down"
     size_hint: (0.2,0.5)
-    background_normal:''
+    group: "page_group"
+    background_normal:""
     background_color:(0.15,0,0,1)
 
 <FavouritePageButton>
     text: "Favourite"
     size_hint:(0.2,0.5)
+    group: "page_group"
     background_normal:''
     background_color:(0.15,0,0,1)
 
@@ -20,7 +23,7 @@
 <FavouriteButton>
     id: favouriteButton
     font_size:15
-    text: "Favourite"
-    size_hint: (0.5, 0.5)
-    background_normal:''
+    text: "FAV"
+    size_hint: (0.25, 0.25)
+    background_normal:""
     background_color: (1,0,0,1)

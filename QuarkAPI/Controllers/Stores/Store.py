@@ -35,6 +35,6 @@ class Store:
         if original_price == 0:
             return 0
         discount_percentage = (original_price - price) / original_price
-        discount_percentage = round(discount_percentage, 2)
+        discount_percentage = round(discount_percentage, 2) * 100
 
         return discount_percentage

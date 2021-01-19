@@ -15,6 +15,7 @@ class Game:
     fetch_date: datetime
     store: str
     image_url: str
+    hash_id: int = None
     release_date: datetime = None
     is_stored: bool = False
     currency: str = "EUR"
