@@ -1,0 +1,117 @@
+#:import ScrollEffect  kivy.effects.scroll.ScrollEffect
+<FilterLabel@Label>
+    size_hint_y: None
+    height: 60
+<FilterCheckBox@CheckBox>
+    size_hint_y: None
+    height: 60
+<Separator@Widget>
+    size_hint_y: None
+    thickness: 5
+    margin: 2
+    height: self.thickness + 2 * self.margin
+    canvas:
+        Color:
+            rgb: (0,0,0,1)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+<UpperBar>
+    orientation: 'horizontal'
+    padding: 10
+    spacing: 30
+    size_hint: (1,0.2)
+
+
+<BottomBar>
+    cols:2
+    canvas.before:
+        Color:
+            rgba: (0,0,0.2,1)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+<GamesLayout>
+    effect_cls: ScrollEffect
+    size_hint:(1,1)
+    GridLayout:
+        id: game_container
+        size_hint_y:None
+        height: self.minimum_height
+        spacing: 20
+        cols:1
+        canvas.before:
+            Color:
+                rgba: (1,0,0,1)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+
+<FilterLayout>
+    effect_cls: ScrollEffect
+    size_hint:(0.5,1)
+    GridLayout:
+        id: filters
+        size_hint_y: None
+        height: self.minimum_height
+        canvas.before:
+            Color:
+                rgba: (0.1,0,0,1)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        cols:2
+        FilterLabel:
+            text:"Stores:"
+        FilterLabel
+
+
+        FilterLabel:
+            id: test
+            text:"Steam"
+
+        FilterCheckBox:
+            id: steam_check
+
+
+        FilterLabel:
+            text: "G2A"
+        FilterCheckBox:
+            id: g2a_check
+
+        FilterLabel:
+            text: "GOG"
+        FilterCheckBox:
+            id: gog_check
+
+        Separator
+        Separator
+
+        FilterLabel:
+            text:"Discount"
+        FilterCheckBox:
+            id: discount_check
+
+        Separator
+        Separator
+
+        FilterLabel:
+            text:"Price range:"
+        FilterLabel
+
+        FilterLabel:
+            text:"From:"
+        FromPriceInput:
+            id: price_from
+            size_hint_y:None
+            height: 60
+
+        FilterLabel:
+            text: "To:"
+        ToPriceInput:
+            id: price_to
+            size_hint_y:None
+            height: 60
+
+

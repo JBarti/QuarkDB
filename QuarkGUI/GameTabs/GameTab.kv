@@ -1,0 +1,41 @@
+<GameTab>
+    orientation: 'horizontal'
+    padding: 20
+    spacing: 20
+    size_hint_y: None
+    height:150
+    canvas.before:
+        Color:
+            rgba: (0,1,0,1)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    Image:
+        allow_stretch: True
+        keep_ratio: False
+    GridLayout:
+        cols:2
+        canvas.before:
+            Color:
+                rgba: (0,0,0.2,1)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Label:
+            text: "Name:"
+        Label:
+            id:name_tab
+            text:""
+        Label:
+            text:"Store:"
+        Label:
+            id:genre_tab
+            text:""
+        Label:
+            text:"Price:"
+        Label:
+            id:price_tab
+            text:""
+
+    FavouriteButton:
+        pos_hint:{'center_y': 0.5}

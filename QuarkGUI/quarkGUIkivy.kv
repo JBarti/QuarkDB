@@ -1,0 +1,30 @@
+<MainLayout>
+    canvas.before:
+        Color:
+            rgba: (0,50/255,50/255,1)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    cols:1
+    UpperBar:
+        id: searchbar
+        SearchInput:
+            id: filter_name
+            pos_hint:{'center_y': 0.5}
+        SearchButton:
+            id: btn_search
+            pos_hint:{'center_y': 0.5}
+        MainPageButton:
+            pos_hint:{'center_y': 0.5}
+        FavouritePageButton:
+            pos_hint:{'center_y': 0.5}
+    BottomBar:
+        FilterLayout:
+            id: filters
+        GamesLayout:
+            id: games
+
+
+
+
+
